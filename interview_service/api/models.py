@@ -86,7 +86,7 @@ class EmployerRating(models.Model):
     employer_rating = models.IntegerField()
 
     def __str__(self):
-        return 'Номер работодателя: '+str(self.mployer_id)
+        return 'Номер работодателя: '+str(self.employer_id)
 
     class Meta:
         verbose_name = 'Рейтинг работодателя'
@@ -101,7 +101,7 @@ class Vacancies(models.Model):
     salary = models.CharField('Заработная плата', max_length=60)
 
     def __str__(self):
-        return 'Номер работодателя: '+str(self.mployer_id)
+        return 'Номер работодателя: '+str(self.employer_id)
 
     class Meta:
         verbose_name = 'Вакансия'
@@ -112,9 +112,11 @@ class Resume(models.Model):
     id = models.AutoField(primary_key=True)
     employee_id = models.ForeignKey(Employees, on_delete=models.CASCADE)
     desired_position = models.CharField('Желаемая должность', max_length=40)
+    desired_salary = models.CharField('Желаемая ЗП', default="", max_length=60)
+    skills = models.TextField('Навыки', default="")
 
     def __str__(self):
-        return 'Номер работодателя: '+str(self.mployer_id)
+        return 'Номер работодателя: '+str(self.employee_id)
 
     class Meta:
         verbose_name = 'Резюме'
@@ -123,6 +125,13 @@ class Resume(models.Model):
 
 class Message(models.Model):
     id = models.AutoField(primary_key=True)
-    from_id = models.IntegerField()
-    to_id = models.IntegerField()
+    from_id = models.ForeignKey(Employees, on_delete=models.CASCADE)
+    to_id = models.ForeignKey(Employers, on_delete=models.CASCADE)
     content = models.TextField('Содержимое сообщения')
+
+    def __str__(self):
+        return 'Номер сообщения: '+str(self.id)
+
+    class Meta:
+        verbose_name = 'Сообщение'
+        verbose_name_plural = 'Сообщения'
