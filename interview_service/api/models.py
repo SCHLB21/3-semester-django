@@ -1,6 +1,12 @@
 from django.db import models
 
 
+STATUS_CHOICES = [
+    ('r', 'Прочитано'),
+    ('n', 'Не прочитано'),
+]
+
+
 class Employees(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField('Имя', max_length=30)
@@ -128,6 +134,8 @@ class Message(models.Model):
     from_id = models.ForeignKey(Employees, on_delete=models.CASCADE)
     to_id = models.ForeignKey(Employers, on_delete=models.CASCADE)
     content = models.TextField('Содержимое сообщения')
+    status = models.CharField(
+        default="n", max_length=1, choices=STATUS_CHOICES)
 
     def __str__(self):
         return 'Номер сообщения: '+str(self.id)
