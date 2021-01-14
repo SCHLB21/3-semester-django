@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сервис собеседований</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+     -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutProject">О проекте</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Tasks">Задачи</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#developers">Разработчики</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#technologies">Технологии</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+      <div
+        class="position-relative overflow-hidden p-3 p-md-5 text-center top-header"
+        id="aboutProject"
+      >
+        <div class="col-md-6 p-lg-5">
+          <h1 class="display-4 font-weight-normal mb-5">
+            Сервис <span class="birus-color gamification">Собеседований</span>
+          </h1>
+          <a class="btn btn-secondary btn-lg birus-btn" href="#" target="_blank"
+            >На сайт</a
+          >
+          <a
+            class="btn btn-secondary btn-lg"
+            href="https://github.com/SCHLB21/3-semester-django"
+            target="_blank"
+            >На GitHub</a
+          >
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="jumbotron about-project">
+          <h2 class="display-4">О проекте</h2>
+          <p class="lead">
+            <strong class="birus-color">Сервис Собеседований</strong> - это
+            сервис позволяющий компаниям проводить собеседования с
+            потенциальными работниками через интернет
+          </p>
+        </div>
+
+        <div class="description">
+          <h3 class="display-4 text-center mb-5" id="Tasks">Задачи</h3>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="task-img">
+                <img src="./img/tasks/bd.jpg" alt="" />
+              </div>
+              <h2>Разработка структуры базы данных</h2>
+              <p>
+                Создание схемы базы данных, описание моделей в Django и их
+                сериализация
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <div class="task-img">
+                <img src="./img/tasks/django.jpg" alt="" />
+              </div>
+              <h2>Backend на Django + Django Rest Framework</h2>
+              <p>Настройка Админ панели, использование RESTful API</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="task-img">
+                <img src="./img/tasks/server.jpg" alt="" />
+              </div>
+              <h2>Запуск проекта на сервере</h2>
+              <p>Деплой проекта на сервер fit.mospolytech</p>
+            </div>
+          </div>
+
+          <hr class="featurette-divider" id="developers" />
+
+          <h2 class="display-4">Разработчики</h2>
+
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide custom-carousel"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleCaptions"
+                data-slide-to="0"
+                class="active"
+              ></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active" height="300px">
+                <div class="carousel-caption d-md-block">
+                  <div class="custom-container">
+                    <div class="card custom-item" style="width: 18rem">
+                      <div class="custom-img-container">
+                        <img
+                          src="./img/developers/no-photo.jpg"
+                          class="card-img-top custom-img"
+                          alt=""
+                        />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Дмитрий Комков</h5>
+                        <a
+                          href="https://github.com/SCHLB21"
+                          class="btn btn-primary birus-btn"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Профиль в GitHub</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleCaptions"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleCaptions"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <hr class="featurette-divider" id="technologies" />
+
+          <h2 class="display-4">Используемые технологии</h2>
+          <div class="album py-5">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-4 shadow-sm technology">
+                  <a
+                    href="https://www.djangoproject.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="tech-link"
+                  >
+                    <img src="./img/technologies/django.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card mb-4 shadow-sm technology">
+                  <a
+                    href="https://www.django-rest-framework.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="tech-link"
+                  >
+                    <img src="./img/technologies/drf.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="py-5 mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <img src="./img/polytech.png" alt="Лого Политеха" height="80px" />
+            </div>
+          </div>
+        </div>
+        <small class="d-block mt-5 text-center">&copy; 2021</small>
+      </footer>
+    </main>
+
+    <script src="./js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!--       
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
+  </body>
+</html>
