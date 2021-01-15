@@ -121,6 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 # IMPORT_EXPORT_USE_TRANSACTIONS = True
 
-STATIC_URL = '/static/'
+STATIC_URL = BASE_DIR
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
